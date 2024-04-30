@@ -19,7 +19,7 @@ import (
 
 func main() {
 	if len(os.Args) == 0 {
-		logrus.Fatal("No arguments were passed to the  agent")
+		logrus.Fatal("No arguments were passed to the agent")
 	}
 
 	// All binaries are actually just symlinks to the same agent binary, so we
