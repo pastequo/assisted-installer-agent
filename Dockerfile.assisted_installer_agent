@@ -17,6 +17,7 @@ ARG TARGETPLATFORM
 
 LABEL com.redhat.component assisted-installer-agent
 LABEL description "Agent that runs on baremetal host to install openshift cluster"
+LABEL summary "Agent that runs on baremetal host to install openshift cluster"
 LABEL io.k8s.description "Agent that runs on baremetal host to install openshift cluster"
 LABEL distribution-scope public
 LABEL name assisted-installer-agent
@@ -24,6 +25,7 @@ LABEL release unknown
 LABEL version unknown
 LABEL url https://github.com/openshift/assisted-installer-agent
 LABEL vendor "Red Hat, Inc."
+LABEL maintainer "Red Hat"
 
 RUN if [[ "$TARGETPLATFORM" == "linux/amd64" || -z "$TARGETPLATFORM" ]] ; then dnf install -y biosdevname dmidecode ; fi ; \
     if [[ "$TARGETPLATFORM" == "linux/arm64" || -z "$TARGETPLATFORM" ]] ; then dnf install -y dmidecode ; fi ; \
