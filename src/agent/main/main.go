@@ -37,7 +37,7 @@ func main() {
 	if mainFunc, ok := binaries[binaryName]; ok {
 		mainFunc()
 	} else {
-		logrus.Fatalf("unknown binary name %s, expected one of %s", binaryName, strings.Join(getMapKeysSorted(binaries), ", "))
+		logrus.Fatalf("unknown binary  name %s, expected one of %s", binaryName, strings.Join(getMapKeysSorted(binaries), ", "))
 	}
 }
 
